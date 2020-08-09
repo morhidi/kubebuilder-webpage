@@ -1,0 +1,7 @@
+domain: morhidi.io
+repo: morhidi.io
+resources:
+- group: sandbox
+  kind: WebPage
+  version: v1beta1
+version: "2"

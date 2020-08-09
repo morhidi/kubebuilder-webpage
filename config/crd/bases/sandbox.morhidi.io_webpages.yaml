@@ -1,0 +1,56 @@
+
+---
+apiVersion: apiextensions.k8s.io/v1beta1
+kind: CustomResourceDefinition
+metadata:
+  annotations:
+    controller-gen.kubebuilder.io/version: v0.2.5
+  creationTimestamp: null
+  name: webpages.sandbox.morhidi.io
+spec:
+  group: sandbox.morhidi.io
+  names:
+    kind: WebPage
+    listKind: WebPageList
+    plural: webpages
+    singular: webpage
+  scope: Namespaced
+  validation:
+    openAPIV3Schema:
+      description: WebPage is the Schema for the webpages API
+      properties:
+        apiVersion:
+          description: 'APIVersion defines the versioned schema of this representation
+            of an object. Servers should convert recognized schemas to the latest
+            internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+          type: string
+        kind:
+          description: 'Kind is a string value representing the REST resource this
+            object represents. Servers may infer this from the endpoint the client
+            submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+          type: string
+        metadata:
+          type: object
+        spec:
+          description: WebPageSpec defines the desired state of WebPage
+          properties:
+            foo:
+              description: Foo is an example field of WebPage. Edit WebPage_types.go
+                to remove/update
+              type: string
+          type: object
+        status:
+          description: WebPageStatus defines the observed state of WebPage
+          type: object
+      type: object
+  version: v1beta1
+  versions:
+  - name: v1beta1
+    served: true
+    storage: true
+status:
+  acceptedNames:
+    kind: ""
+    plural: ""
+  conditions: []
+  storedVersions: []
