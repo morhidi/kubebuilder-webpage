@@ -34,13 +34,16 @@ spec:
         spec:
           description: WebPageSpec defines the desired state of WebPage
           properties:
-            foo:
-              description: Foo is an example field of WebPage. Edit WebPage_types.go
-                to remove/update
+            static:
+              minLength: 1
               type: string
           type: object
         status:
           description: WebPageStatus defines the observed state of WebPage
+          properties:
+            lastUpdateTime:
+              format: date-time
+              type: string
           type: object
       type: object
   version: v1beta1

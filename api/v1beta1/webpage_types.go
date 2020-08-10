@@ -25,17 +25,14 @@ import (
 
 // WebPageSpec defines the desired state of WebPage
 type WebPageSpec struct {
-	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
-	// Important: Run "make" to regenerate code after modifying this file
-
-	// Foo is an example field of WebPage. Edit WebPage_types.go to remove/update
-	Foo string `json:"foo,omitempty"`
+	// +kubebuilder:validation:MinLength=1
+	Static string `json:"static,omitempty"`
 }
 
 // WebPageStatus defines the observed state of WebPage
 type WebPageStatus struct {
-	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
-	// Important: Run "make" to regenerate code after modifying this file
+	// +optional
+	LastUpdateTime *metav1.Time `json:"lastUpdateTime,omitempty"`
 }
 
 // +kubebuilder:object:root=true
