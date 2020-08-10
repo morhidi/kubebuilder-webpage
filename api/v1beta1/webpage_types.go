@@ -36,6 +36,7 @@ type WebPageStatus struct {
 }
 
 // +kubebuilder:object:root=true
+// +kubebuilder:subresource:status
 
 // WebPage is the Schema for the webpages API
 type WebPage struct {

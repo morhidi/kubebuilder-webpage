@@ -15,6 +15,8 @@ spec:
     plural: webpages
     singular: webpage
   scope: Namespaced
+  subresources:
+    status: {}
   validation:
     openAPIV3Schema:
       description: WebPage is the Schema for the webpages API

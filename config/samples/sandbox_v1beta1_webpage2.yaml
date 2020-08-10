@@ -1,6 +1,0 @@
-apiVersion: sandbox.morhidi.io/v1beta1
-kind: WebPage
-metadata:
-  name: webpage-sample2
-spec:
-  static: "/tmp/static2"
